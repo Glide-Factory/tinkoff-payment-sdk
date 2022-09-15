@@ -3,6 +3,7 @@ import { ResponsePayload as BaseResponsePayload } from '../response-payload';
 import { Language } from './common/language';
 import { PayType } from './common/pay-type';
 import { Receipt, Receipts } from './common/receipt';
+import { Shop } from "./common/shop";
 /**
  * @see https://acdn.tinkoff.ru/static/documents/bezopasnaya_sdelka.pdf
  */
@@ -83,6 +84,7 @@ export interface InitPaymentRequestPayload {
     SuccessURL?: string;
     FailURL?: string;
     PayType?: PayType;
+    Shops: Shop[];
     Receipt?: Receipt;
     Receipts?: Receipts[];
     DATA?: Partial<ITinkoffInitRequestData> | string;
