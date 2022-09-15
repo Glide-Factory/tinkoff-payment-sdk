@@ -7,6 +7,7 @@ import { Language } from './common/language';
 import { PayType } from './common/pay-type';
 import { validateAndPrepareReceipt, validateAndPrepareReceipts } from './common/receipt';
 import { Receipt, Receipts } from './common/receipt';
+import {Shop} from "./common/shop";
 
 
 //=========//
@@ -102,6 +103,7 @@ export interface InitPaymentRequestPayload {
   SuccessURL?: string;
   FailURL?: string;
   PayType?: PayType;
+  Shops: Shop[];
   Receipt?: Receipt;
   Receipts?: Receipts[];
   DATA?: Partial<ITinkoffInitRequestData> | string;
