@@ -1,4 +1,3 @@
-import { moneyToPennyOrThrow } from '../../../serialization/serializers/money';
 import { ICardData } from '../finish-authorize';
 
 export interface Receipt {
@@ -167,7 +166,7 @@ function validateAndPrepareReceiptItem(item: ReceiptItem): ReceiptItem {
     throw new Error('Price must be set for receipt item');
   }
 
-  $item.Price = moneyToPennyOrThrow($item.Price);
+  // $item.Price = moneyToPennyOrThrow($item.Price);
 
 
   //----------//

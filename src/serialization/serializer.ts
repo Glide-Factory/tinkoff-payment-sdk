@@ -5,7 +5,6 @@ import { Schema, SchemaPropertyType } from './schema';
 import { booleanFromString, booleanToString } from './serializers/boolean';
 import { dateFromStringOrThrow, dateToStringOrThrow, expDateFromStringOrThrow } from './serializers/date';
 import { integerFromString, integerToString } from './serializers/integer';
-import { moneyFromPennyOrThrow, moneyToPennyOrThrow } from './serializers/money';
 
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -43,11 +42,11 @@ export function serializeData<DataType extends {}>(options: {
 
       switch (type) {
       case SchemaPropertyType.MoneyToPenny:
-        value = moneyToPennyOrThrow(value);
+        // value = moneyToPennyOrThrow(value);
         break;
 
       case SchemaPropertyType.MoneyFromPenny:
-        value = moneyFromPennyOrThrow(value);
+        // value = moneyFromPennyOrThrow(value);
         break;
 
       case SchemaPropertyType.DateToString:
