@@ -24,7 +24,7 @@ export interface CancelPaymentRequestPayload {
   /** В чеке указываются данные товаров, подлежащих возврату */
   Receipt?: Receipt;
 
-  Shops?: Shop;
+  Shops?: Shop[];
   Receipts?: Receipts[];
 }
 

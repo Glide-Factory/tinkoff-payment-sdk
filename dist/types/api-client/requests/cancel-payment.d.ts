@@ -13,7 +13,7 @@ export interface CancelPaymentRequestPayload {
     Token?: string;
     /** В чеке указываются данные товаров, подлежащих возврату */
     Receipt?: Receipt;
-    Shops?: Shop;
+    Shops?: Shop[];
     Receipts?: Receipts[];
 }
 export interface CancelPaymentResponsePayload extends BaseResponsePayload {
