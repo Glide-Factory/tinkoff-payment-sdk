@@ -6,7 +6,6 @@ const schema_1 = require("./schema");
 const boolean_1 = require("./serializers/boolean");
 const date_1 = require("./serializers/date");
 const integer_1 = require("./serializers/integer");
-const money_1 = require("./serializers/money");
 // eslint-disable-next-line @typescript-eslint/ban-types
 function serializeData(options) {
     const { schema, ignoreMissing, } = options;
@@ -27,10 +26,10 @@ function serializeData(options) {
             }
             switch (type) {
                 case schema_1.SchemaPropertyType.MoneyToPenny:
-                    value = money_1.moneyToPennyOrThrow(value);
+                    // value = moneyToPennyOrThrow(value);
                     break;
                 case schema_1.SchemaPropertyType.MoneyFromPenny:
-                    value = money_1.moneyFromPennyOrThrow(value);
+                    // value = moneyFromPennyOrThrow(value);
                     break;
                 case schema_1.SchemaPropertyType.DateToString:
                     value = date_1.dateToStringOrThrow(value);

@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validateAndPrepareReceipts = exports.validateAndPrepareReceipt = exports.validateAndPrepareCardData = exports.AgentDataAgentSign = exports.ReceiptTaxation = exports.ReceiptTax = exports.ReceiptPaymentObject = exports.ReceiptPaymentMethod = void 0;
-const money_1 = require("../../../serialization/serializers/money");
 var ReceiptPaymentMethod;
 (function (ReceiptPaymentMethod) {
     ReceiptPaymentMethod["FULL_PAYMENT"] = "full_payment";
@@ -95,7 +94,7 @@ function validateAndPrepareReceiptItem(item) {
     if (!$item.Price) {
         throw new Error('Price must be set for receipt item');
     }
-    $item.Price = money_1.moneyToPennyOrThrow($item.Price);
+    // $item.Price = moneyToPennyOrThrow($item.Price);
     //----------//
     // QUANTITY //
     //----------//
